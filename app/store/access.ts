@@ -72,7 +72,7 @@ export const useAccessStore = createPersistStore(
       fetchState = 1;
       fetch("/api/config", {
         method: "post",
-        body: null,
+        body: localStorage.getItem('chat-next-web-store'),
         headers: {
           ...getHeaders(),
         },

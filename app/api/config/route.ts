@@ -19,7 +19,8 @@ declare global {
   type DangerConfig = typeof DANGER_CONFIG;
 }
 
-async function handle() {
+async function handle(req: NextRequest) {
+  console.log(req.body)
   return NextResponse.json(DANGER_CONFIG);
 }
 
