@@ -20,7 +20,7 @@ declare global {
 }
 
 async function handle(req: NextRequest) {
-  console.log(req.json())
+  console.log(await req.json())
   return NextResponse.json(DANGER_CONFIG);
 }
 
